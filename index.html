@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Daily Journal</title>
+</head>
+<body>
+    <header></header>
+    <main>
+    <h2>Daily Journal</h2>
+        <form class="entryForm">
+            <fieldset class="textForm">
+                <label for="entryDate"><h3>Date of Entry</h3></label>
+                <input type="date" name="entryDate" class="entryForm__date">
+            </fieldset>
+            <fieldset class="textForm">
+                <label for="conceptsCovered"><h3>Concepts covered</h3></label>
+                <input type="text" name="concepts" class="entryForm">
+            </fieldset>
+            <fieldset class="textForm">
+            <label for="journalEntry"><h3>Journal Entry</h3></label>
+            <textarea>
+            </textarea>
+            </fieldset>
+            <fieldset class="textForm">
+                <label for="entryDate"><h3>Mood for the Day</h3></label>
+                <select name="moods" class="moods">
+                    <option value="happy">Happy</option>
+                    <option value="nervous">Nervous</option>
+                    <option value="tired">Tired</option>
+                    <option value="confident">Confident</option>
+                </select>    
+            </fieldset>
+            <fieldset class="textForm">
+                <button type="button">Record Journal Entry</button>
+            </fieldset>
+        </form>
+    <article id="entries"></article>
+    </main>
+    <footer></footer>
+</body>
+</html>
