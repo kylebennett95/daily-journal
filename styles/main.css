@@ -1,3 +1,7 @@
+.container {
+    width: 400px;
+}
+
 .textForm {
     display: flex;
     flex-direction: column;
