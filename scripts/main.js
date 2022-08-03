@@ -43,6 +43,20 @@ const entry = [
     language: "HTML/CSS",
 
 },
+{
+    id: 6,
+    date: "08/01/2022",
+    concept: "JavaScript Intro Part 1",
+    entry: "Today we practiced our first bit of JavaScript in class such as arrays and for of loops. It was tough at first but I think I'm figuring it out",
+    mood: "Confident"
+},
+{
+    id: 7,
+    date: "08/02/2022",
+    concept: "JavaScript Intro Part 2",
+    entry: "Lynn demonstrated some more complex formulas in JavaScript, and really had me scratching my head for a while. I think I have a very basic understanding of it, but I definitley need more practice.",
+    mood: "Nervous"
+}
 ]
 
 console.log(entry)
