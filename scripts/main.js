@@ -50,4 +50,28 @@ const entry = [
 }
 ]
 
-console.log(entry)
+//console.log(entry)
+
+for (const taco of entry) {
+    if(taco.id > 0) {
+        //console.log(taco.entry)
+    } else {
+        //console.log('Error')
+    }
+}
+
+for (const taco of entry) {
+    if(taco.id > 0) {
+        //console.log(taco.concept)
+    } else {
+        //console.log('Error')
+    }
+}
+
+for (const taco of entry) {
+    if(taco.id % 2 == 1) {
+        console.log(taco.entry)
+    } else {
+        console.log('')
+    }
+}
