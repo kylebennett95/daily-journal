@@ -1,11 +1,31 @@
+.header {
+    text-align: center;
+    color: white;
+}
+.main {
+    background-color: rgb(7, 58, 58);
+}
 .container {
-    width: 400px;
+    width: 50%;
+    margin: auto;
 }
 
 .textForm {
     display: flex;
     flex-direction: column;
+    background-color: rgb(7, 114, 114);
+    border: 1px solid white;
+    margin-top: 9px;
 }
 .button {
     width: 200px;
+}
+.taco {
+    border: 1px solid white;
+    text-align: center;
+    background-color: rgb(7, 114, 114);
+    margin-top: 9px;
+}
+.text {
+    text-align: center;
 }

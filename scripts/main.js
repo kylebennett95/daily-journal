@@ -1,11 +1,6 @@
 import {getQuotes} from "./entries.js"
 
 
-//console.log(entry)
-
-
-// const htmlString = '<h1>Previous Entries</h1>'
-// document.getElementById('entries').innerHTML = htmlString
 const getEntries = () => {
 let html = "";
 const entry = getQuotes();
