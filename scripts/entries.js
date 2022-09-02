@@ -60,7 +60,24 @@ const entry = [
     }
     ]
 
-    export const getQuotes = () => {
-        const copyOfQuotes = entry;
-        return copyOfQuotes;
-    };
+
+
+    const getNewEntryId = () => {
+        let highestEntryId = entry.sort((a, b) => a.id - b.id)[0].id
+        return highestEntryId + 1
+      }
+      
+      export const getQuotes = () => {
+        // Add logic here to return a copy of your quotes
+        return entry.map(entries => ({...entries}))
+      }
+      
+      export const addNewEntry = (entries) => {
+        console.log("new entry", entries)
+        const newId = getNewEntryId()
+        entries.id = newId
+        // need to add logic
+        entry.push(entries)
+        console.log(entry)
+        document.dispatchEvent(new CustomEvent("stateChanged"))
+      }

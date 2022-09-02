@@ -18,34 +18,34 @@
                     <label for="entryDate">
                         <h3 class="text">Date of Entry</h3>
                     </label>
-                    <input type="date" name="entryDate" class="entryForm__date">
+                    <input type="date" name="entryDate" id="date" class="entryForm__date">
                 </fieldset>
                 <fieldset class="textForm">
                     <label for="conceptsCovered">
                         <h3 class="text">Concepts covered</h3>
                     </label>
-                    <input type="text" name="concepts" class="entryForm">
+                    <input type="text" name="concepts" id="concepts" class="entryForm">
                 </fieldset>
                 <fieldset class="textForm">
                     <label for="journalEntry">
                         <h3 class="text">Journal Entry</h3>
                     </label>
-                    <textarea>
+                    <textarea id="text">
             </textarea>
                 </fieldset>
                 <fieldset class="textForm">
                     <label for="entryDate">
                         <h3 class="text">Mood for the Day</h3>
                     </label>
-                    <select name="moods" class="moods">
-                        <option value="happy">Happy</option>
-                        <option value="nervous">Nervous</option>
-                        <option value="tired">Tired</option>
-                        <option value="confident">Confident</option>
+                    <select name="moods" id="moods" class="moods">
+                        <option value="Happy">Happy</option>
+                        <option value="Nervous">Nervous</option>
+                        <option value="Tired">Tired</option>
+                        <option value="Confident">Confident</option>
                     </select>
                 </fieldset>
                 <fieldset class="textForm">
-                    <button type="button">Record Journal Entry</button>
+                    <button type="button" button id="recordButton">Record Journal Entry</button>
                 </fieldset>
             </form>
             <h2 class="header">Previous Entries</h2>
