@@ -1,9 +1,9 @@
-import {addNewEntry, getQuotes} from "./entries.js"
+import {addNewEntry, fetchEntries, getEntries, sendEntries} from "./entries.js"
 
-
-const getEntries = () => {
+const postEntries = async () => {
 let html = "";
-const entry = getQuotes();
+await fetchEntries();
+const entry = getEntries();
 for (let i = 0; i < entry.length; i++) {
     html += `<div class="taco">
         <p>${entry[i].concept}</p>
@@ -15,15 +15,14 @@ for (let i = 0; i < entry.length; i++) {
 document.getElementById('entries').innerHTML = html;
 }
 
-document.addEventListener("click", (e) => {
-    e.preventDefault
-    if (e.target.id === "recordButton") {
-        console.log("recording entry")
-        //Logic to get all values from form
-        const date = document.getElementById("date")?.value
-        const concCovered = document.getElementById("concepts")?.value
-        const jEntry = document.getElementById("text")?.value
-        const mood = document.getElementById("moods")?.value
+const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "submitRequest") {
+        const date = document.querySelector("input[name='entryDate']").value
+        const concCovered = document.querySelector("input[name='concepts']").value
+        const jEntry = document.querySelector("input[name='text']").value
+        const mood = document.querySelector("input[name='moods']").value
 
         //format entries into object
     const newEntry = {
@@ -33,15 +32,12 @@ document.addEventListener("click", (e) => {
         mood: mood
     }
 
-    console.log(newEntry)
-
-    addNewEntry(newEntry)
+    sendEntries(newEntry)
     }
 });
 
 document.addEventListener("stateChanged", event => {
-    getEntries()
+    postEntries()
 });
 
-getEntries()
-
+postEntries()
