@@ -1,3 +1,4 @@
+
 const API = "http://localhost:8088"
 
 let journalEntries = [];
@@ -30,7 +31,9 @@ export const sendEntries = async (entriesPosted) => {
         body: JSON.stringify(entriesPosted)
     }
   
-    const response = await fetch(`${API}/entries`, fetchOptions)
-    const responseJson = await response.json()
-    return responseJson
+    const mainContainer = document.querySelector("#container");
+    const response = await fetch(`${API}/entries`, fetchOptions);
+    const responseJson = await response.json();
+    mainContainer.dispatchEvent(new CustomEvent("stateChanged"));
+    return responseJson;
   }
